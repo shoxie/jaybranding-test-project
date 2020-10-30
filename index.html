@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@8af0edd/css/all.css" rel="stylesheet"
+    type="text/css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="cursor">
+    <div id="cursor-shape"></div>
+  </div>
+  <nav class="w-full" style="background-color: #212121">
+    <div class="fixed w-full" style="background-color: #212121; z-index: 999999;">
+      <div class="container mx-auto w-full">
+        <div class="flex flex-row justify-between items-center w-full py-8">
+          <div>
+            <img src="./images/logo.png" alt="" />
+          </div>
+          <div class="w-4/12">
+            <div class="flex flex-row w-full">
+              <div class="hidden md:flex flex-row w-full">
+                <input class="w-full px-2 py-2 rounded-lg" type="text" placeholder="Search"
+                  style="background-color: #484848" />
+                <button class="text-white -ml-8">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+              <img class="pl-5" src="./images/logo_icon.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="fixed pr-32 flex flex-col gap-5" style="top: 35%; right: 0">
+    <!-- <a href="#" class="text-white flex flex-row"
+        >home
+        <div ></div>
+      </a> -->
+    <!-- <a href="https://facebook.com" style="
+          writing-mode: vertical-rl;
+          text-orientation: mixed;
+          ">Follow Us</a></li> -->
+    <button id="homebtn" class="flex flex-col gap-5 text-white items-end justify-between group">
+      <span class="px-2 py-2 rounded-full border ml-2 rshape"></span>
+      <!-- <span
+          id="hometext"
+          style="writing-mode: vertical-rl; text-orientation: mixed"
+          class="font-montserrat"
+          >
+        </span> -->
+    </button>
+    <button id="eventbtn" class="flex flex-col gap-5 text-white items-end justify-between group">
+      <span class="px-2 py-2 rounded-full border ml-2 rshape"></span>
+      <!-- <span
+          style="writing-mode: vertical-rl; text-orientation: mixed"
+          class="font-montserrat"
+          >Event
+        </span> -->
+    </button>
+  </div>
+  <section class="hidden md:block fixed" style="bottom: 5%; right: 15%; z-index: 999999">
+    <div class="flex flex-row gap-5">
+      <a class="text-white px-8 py-2 hide-button" style="
+            background: rgb(233, 23, 23);
+            background: linear-gradient(
+              90deg,
+              rgba(233, 23, 23, 1) 0%,
+              rgba(219, 66, 66, 1) 100%
+            );
+          " href=""><i class="fas fa-download pr-3"></i>Credentials</a>
+      <div class="px-2 py-2 bg-white rounded-full">
+        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook"
+          class="svg-inline--fa fa-facebook fa-w-16 icon facebook" role="img" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512">
+          <path fill="currentColor"
+            d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z">
+          </path>
+        </svg>
+      </div>
+      <div class="px-2 py-2 bg-white rounded-full">
+        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube"
+          class="svg-inline--fa fa-youtube fa-w-18 icon youtube" role="img" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 576 512">
+          <path fill="currentColor"
+            d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+          </path>
+        </svg>
+      </div>
+    </div>
+  </section>
+  <section id="home" class="min-h-screen w-full bg-center bg-cover bg-no-repeat marker1"
+    style="background-image: url('./images/home_background.png');">
+    <div class="container mx-auto">
+      <div class="flex flex-col items-center justify-center h-screen">
+        <div class="flex flex-col">
+          <h1 class="hide">
+            <span class="text text-white uppercase md:text-5xl text-4xl md:text-left text-center">welcome to</span>
+          </h1>
+          <h1 class="hide">
+            <span
+              class="text uppercase inline-block stroke-white md:-mt-10 md:font-bold md:text-9xl text-4xl md:text-left text-center">hoan
+              vu</span>
+          </h1>
+          <h1 class="hide">
+            <span
+              class="text uppercase inline-block stroke-white-white md:-mt-10 md:font-bold md:text-9xl text-4xl md:text-left text-center">group</span>
+          </h1>
+          <div class="flex flex-col">
+            <h1 class="hide">
+              <span class="text text-gray-500 text-2xl md:text-left text-center">Is an award-winning digital
+                marketing,</span>
+            </h1>
+            <h1 class="hide">
+              <span class="text text-gray-500 text-2xl md:text-left text-center">creative and PR agency focused on the
+                ASEAN region.</span>
+            </h1>
+            <h1 class="hide">
+              <span class="text text-gray-500 text-2xl md:text-left text-center">We own offices in Indonesia, Myanmar,
+                Thailand and
+                Vietnam</span>
+            </h1>
+          </div>
+        </div>
+        <div class="flex flex-row justify-between w-full">
+          <div></div>
+          <!-- <div class="flex flex-row gap-5">
+                        <a class="bg-whit text-white px-8 py-2" style="background: rgb(233,23,23);
+                        background: linear-gradient(90deg, rgba(233,23,23,1) 0%, rgba(219,66,66,1) 100%);" href=""><i
+                                class="fas fa-download pr-3"></i>Credentials</a>
+                        <div class="px-2 py-2 bg-white rounded-full">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook"
+                                class="svg-inline--fa fa-facebook fa-w-16 icon facebook" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="px-2 py-2 bg-white rounded-full">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube"
+                                class="svg-inline--fa fa-youtube fa-w-18 icon youtube" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="event" class="min-h-screen w-full bg-center bg-cover bg-no-repeat"
+    style="background-image: url('./images/event_background.png')">
+    <div class="container mx-auto">
+      <div class="flex flex-row justify-between items-center" style="padding-top: 7rem">
+        <div>
+          <span class="font-bold stroke-red md:pl-20 pl-4 marker md:text-9xl text-4xl">EVENT</span>
+        </div>
+        <div>
+          <a class="text-white px-8 py-2" style="
+                background: rgb(233, 23, 23);
+                background: linear-gradient(
+                  90deg,
+                  rgba(233, 23, 23, 1) 0%,
+                  rgba(219, 66, 66, 1) 100%
+                );
+              " href=""><i class="fas fa-download pr-3"></i>Credentials</a>
+        </div>
+      </div>
+    </div>
+    <div class="container2 mx-auto relative md:block hidden">
+      <div class="tabs w-full">
+        <div class="tab-header">
+          <div class="active">
+            <span class="number font-montserrat font-bold">01</span>
+            <span class="text font-montserrat font-bold"> FESTIVAL </span>
+          </div>
+          <div>
+            <span class="number font-montserrat font-bold">02</span>
+            <span class="text font-montserrat font-bold"> CONFERENCE </span>
+          </div>
+          <div>
+            <span class="number font-montserrat font-bold">03</span>
+            <span class="text font-montserrat font-bold">
+              GALA & CEREMONY
+            </span>
+          </div>
+          <div>
+            <span class="number font-montserrat font-bold">04</span>
+            <span class="text"> MICE </span>
+          </div>
+          <div>
+            <span class="number font-montserrat font-bold">05</span>
+            <span class="text font-montserrat font-bold">
+              PRODUCT LAUNCHING
+            </span>
+          </div>
+          <div>
+            <span class="number font-montserrat font-extrabold">05</span>
+            <span class="text font-montserrat font-bold">
+              ACTIVATION & ROAD
+            </span>
+          </div>
+        </div>
+
+        <div class="tab-content">
+          <div class="active grid grid-cols-3 gap-5 col-gap-10 w-full h-full grid-rows-2 test px-10">
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event1.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event2.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event3.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event4.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event5.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event6.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-5 col-gap-10 w-full h-full grid-rows-2 test px-10">
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event1.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event2.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event3.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event4.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event5.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event6.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-5 col-gap-10 w-full h-full grid-rows-2 test px-10">
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event1.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event2.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event3.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event4.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event5.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event6.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-5 col-gap-10 w-full h-full grid-rows-2 test px-10">
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event1.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event2.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event3.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event4.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event5.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event6.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-5 col-gap-10 w-full h-full grid-rows-2 test px-10">
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event1.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event2.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event3.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event4.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event5.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event6.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-5 col-gap-10 w-full h-full grid-rows-2 test px-10">
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event1.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event2.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event3.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event4.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event5.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+            <div class="h-full bg-no-repeat bg-cover relative group shadow frame"
+              style="background-image: url('./images/event6.png')">
+              <div
+                class="flex flex-col gap-2 w-full h-full items-start justify-end pl-3 pb-4 absolute text-white opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300"
+                style="z-index: 99999 !important">
+                <span class="text-2xl font-bold font-montserrat tracking-wide">PROJECT 1</span>
+                <span class="font-montserrat text-gray-300 tracking-widest text-sm font-bold">Công ty A</span>
+              </div>
+              <div
+                class="w-full h-full bg-red-600 opacity-0 group-hover:opacity-75 absolute top-0 transition-all ease-in-out duration-300 z-0">
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="md:hidden lg:hidden xl:hidden">
+      <div class="tab-wrap">
+        <input type="radio" id="tab1" name="tabGroup1" class="tab font-montserrat" checked />
+        <label for="tab1">FESTIVAL</label>
+
+        <input type="radio" id="tab2" name="tabGroup1" class="tab font-montserrat" />
+        <label for="tab2">CONFERENCE</label>
+
+        <input type="radio" id="tab3" name="tabGroup1" class="tab font-montserrat" />
+        <label for="tab3">GALA & CEREMONY</label>
+
+        <input type="radio" id="tab3" name="tabGroup1" class="tab font-montserrat" />
+        <label for="tab3">MICE</label>
+
+        <input type="radio" id="tab3" name="tabGroup1" class="tab font-montserrat" />
+        <label for="tab3">PRODUCT LAUNCHING</label>
+
+        <input type="radio" id="tab3" name="tabGroup1" class="tab font-montserrat" />
+        <label for="tab3">ACTIVATION & ROAD </label>
+
+        <div class="tab__content">
+          <div class="grid grid-cols-2 grid-rows-3">
+            <div class="frame" style="background-image: url('./images/event1.png')">
+              <div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab__content">
+          <h3>Section Two</h3>
+        </div>
+
+        <div class="tab__content">
+          <h3>Section Three</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://unpkg.com/kinet@2.2.1/dist/kinet.min.js"></script> -->
+<script type="text/javascript">
+  const PX_RATIO = window.devicePixelRatio;
+
+  Math.dist = (dx, dy) => {
+    return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2))
+  }
+
+  class Cursor {
+    constructor() {
+      this.container = window["cursor"];
+      this.shape = window["cursor-shape"];
+      this.translation = { x: 1, y: 1 };
+      this.mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+      this.precision = 2;
+      this.scale = 1;
+      this.rotation = 1;
+      this.friction = 0.1;
+      this.animate();
+      this.events();
+    }
+
+    events() {
+      document.addEventListener('mousemove', (e) => {
+        this.mouse.x = e.clientX * PX_RATIO;
+        this.mouse.y = e.clientY * PX_RATIO;
+      }, false);
+    }
+
+    animate() {
+      requestAnimationFrame(this.animate.bind(this));
+      this.render();
+    }
+
+    speed_morph() {
+      const dist = Math.dist(this.dx, this.dy);
+      const min = 0.3;
+      const max_distance = 500;
+      const total = dist / max_distance;
+      return Number(Math.min(total, min).toFixed(2));
+    }
+
+    update() {
+      const speed_morph = this.speed_morph(this.dx, this.dy);
+      this.scale += (speed_morph - this.scale) * this.friction;
+
+      this.translation.x += this.dx * this.friction;
+      this.translation.y += this.dy * this.friction;
+
+      this.rotation = Math.atan2(this.dy, this.dx) * 180 / Math.PI;
+
+    }
+
+    render() {
+      this.update();
+      this.container.style.transform = 'translate3d(' + this.translation.x.toFixed(this.precision) + 'px ,' + this.translation.y.toFixed(this.precision) + 'px, 0)';
+      this.shape.style.transform = 'rotate(' + this.rotation.toFixed(this.precision) + 'deg) ' + 'scale(' + (1 + this.scale) + ', ' + (1 - this.scale) + ')';
+    }
+
+    get dx() {
+      return this.mouse.x - this.translation.x;
+    }
+
+    get dy() {
+      return this.mouse.y - this.translation.y;
+    }
+  }
+
+  const _cursor = new Cursor();
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.to('.rshape', {
+    scrollTrigger: {
+      trigger: "#event",
+      toggleActions: "play none none reverse",
+    }, ease: "power1.out", duration: 1, css: { border: "2px red solid"}
+  })
+  
+  gsap.to(".hide-button", {
+    scrollTrigger: {
+      trigger: ".marker",
+      toggleActions: "play none none reverse",
+    },
+    opacity: "0",
+    duration: 1,
+    ease: "power1.out",
+  });
+  gsap.to(".text", { duration: 1, stagger: 0, y: "0", ease: "power1.out" });
+  // gsap.to('.hide-button', { scrollTrigger: {
+  //     trigger: ".marker1",
+  //     toggleActions: "play none none none",
+  //   },
+  //   opacity: "1",
+  //   duration: 1,
+  //   ease: "power1.out"
+  // })
+  var hash;
+  $("#homebtn").on("click", function (event) {
+    $("#eventbtn span.rshape").removeClass("bg-red-600");
+    $("#homebtn span.rshape").addClass("bg-red-600");
+    $("#eventtext").remove();
+    if (!$("#hometext").length)
+      $(`<span
+          id='hometext'
+          style='writing-mode: vertical-rl; text-orientation: mixed'
+          class='font-montserrat font-bold'
+          >Home
+        </span>`).appendTo("#homebtn");
+    $("html, body").animate(
+      {
+        scrollTop: $("#home").offset().top,
+      },
+      3000,
+      function () {
+        window.location.hash = hash;
+      }
+    );
+  });
+  $("#eventbtn").on("click", function (event) {
+    $("#homebtn span.rshape").removeClass("bg-red-600");
+    $("#eventbtn span.rshape").addClass("bg-red-600");
+    $("#hometext").remove();
+    if (!$("#eventtext").length)
+      $(`<span
+          id='eventtext'
+          style='writing-mode: vertical-rl; text-orientation: mixed'
+          class='font-montserrat font-bold text-red-600'
+          >Event
+        </span>`).appendTo("#eventbtn");
+    $("html, body").animate(
+      {
+        scrollTop: $("#event").offset().top,
+      },
+      3000,
+      function () {
+        window.location.hash = hash;
+      }
+    );
+  });
+  function _class(name) {
+    return document.getElementsByClassName(name);
+  }
+
+  let tabPanes = _class("tab-header")[0].getElementsByTagName("div");
+
+  for (let i = 0; i < tabPanes.length; i++) {
+    tabPanes[i].addEventListener("click", function () {
+      _class("tab-header")[0]
+        .getElementsByClassName("active")[0]
+        .classList.remove("active");
+      tabPanes[i].classList.add("active");
+
+      _class("tab-content")[0]
+        .getElementsByClassName("active")[0]
+        .classList.remove("active");
+      _class("tab-content")[0]
+        .getElementsByClassName("test")
+      [i].classList.add("active");
+    });
+  }
+</script>
+
+</html>
