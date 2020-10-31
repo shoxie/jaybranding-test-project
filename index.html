@@ -12,11 +12,31 @@
 </head>
 
 <body>
+  <section
+      class="fixed bg-black w-full h-full intro"
+      style="z-index: 99999999"
+    >
+      <div
+        class="h-full"
+      >
+      <svg id="logo" width="1008" height="169" viewBox="0 0 1008 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M136.506 7.63535V161.365H103.322V98.3357H38.1838V161.365H5V7.63535H38.1838V68.2486H103.322V7.63535H136.506Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+        <path d="M239.871 164C224.986 164 211.535 160.559 199.518 153.678C187.637 146.797 178.283 137.354 171.455 125.348C164.764 113.196 161.418 99.5801 161.418 84.5C161.418 69.4199 164.764 55.8771 171.455 43.8715C178.283 31.7196 187.637 22.203 199.518 15.3218C211.535 8.44061 224.986 5 239.871 5C254.756 5 268.139 8.44061 280.019 15.3218C291.9 22.203 301.254 31.7196 308.082 43.8715C314.91 55.8771 318.324 69.4199 318.324 84.5C318.324 99.5801 314.91 113.196 308.082 125.348C301.254 137.354 291.9 146.797 280.019 153.678C268.139 160.559 254.756 164 239.871 164ZM239.871 133.693C248.338 133.693 255.985 131.644 262.813 127.544C269.641 123.298 274.966 117.442 278.79 109.975C282.75 102.508 284.73 94.0166 284.73 84.5C284.73 74.9834 282.75 66.4917 278.79 59.0249C274.966 51.558 269.641 45.7749 262.813 41.6754C255.985 37.4296 248.338 35.3066 239.871 35.3066C231.404 35.3066 223.757 37.4296 216.929 41.6754C210.101 45.7749 204.707 51.558 200.747 59.0249C196.923 66.4917 195.011 74.9834 195.011 84.5C195.011 94.0166 196.923 102.508 200.747 109.975C204.707 117.442 210.101 123.298 216.929 127.544C223.757 131.644 231.404 133.693 239.871 133.693Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+        <path d="M435.693 128.423H369.12L356.421 161.365H322.417L386.327 7.63535H419.101L483.215 161.365H448.393L435.693 128.423ZM425.246 101.41L402.509 42.5539L379.772 101.41H425.246Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+        <path d="M629.598 7.63535V161.365H602.354L530.866 68.029V161.365H498.092V7.63535H525.54L596.824 100.971V7.63535H629.598Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+        <path d="M859.389 7.63535L797.323 161.365H764.549L702.688 7.63535H738.535L782.165 117.442L826.41 7.63535H859.389Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+        <path d="M938.066 164C917.582 164 901.605 157.924 890.134 145.772C878.8 133.62 873.133 116.271 873.133 93.7238V7.63535H906.316V92.4061C906.316 119.931 916.968 133.693 938.271 133.693C948.65 133.693 956.57 130.399 962.032 123.811C967.495 117.076 970.226 106.608 970.226 92.4061V7.63535H1003V93.7238C1003 116.271 997.265 133.62 985.794 145.772C974.459 157.924 958.55 164 938.066 164Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+        </svg>
+      </div>
+      <div
+        class="slider bg-pink-300 fixed w-full h-full translate-y-full"
+      ></div>
+    </section>
   <div id="cursor">
     <div id="cursor-shape"></div>
   </div>
   <nav class="w-full" style="background-color: #212121">
-    <div class="fixed w-full" style="background-color: #212121; z-index: 999999;">
+    <div class="fixed w-full" style="background-color: #212121; z-index: 50;">
       <div class="container mx-auto w-full">
         <div class="flex flex-row justify-between items-center w-full py-8">
           <div>
@@ -38,7 +58,7 @@
       </div>
     </div>
   </nav>
-  <div class="fixed pr-32 flex flex-col gap-5" style="top: 35%; right: 0">
+  <div class="fixed md:pr-32 flex flex-col gap-5" style="top: 35%; right: 0">
     <!-- <a href="#" class="text-white flex flex-row"
         >home
         <div ></div>
@@ -65,7 +85,7 @@
         </span> -->
     </button>
   </div>
-  <section class="hidden md:block fixed" style="bottom: 5%; right: 15%; z-index: 999999">
+  <section class="hidden md:block fixed" style="bottom: 5%; right: 15%; z-index: 50">
     <div class="flex flex-row gap-5">
       <a class="text-white px-8 py-2 hide-button" style="
             background: rgb(233, 23, 23);
@@ -99,7 +119,7 @@
     style="background-image: url('./images/home_background.png');">
     <div class="container mx-auto">
       <div class="flex flex-col items-center justify-center h-screen">
-        <div class="flex flex-col">
+        <div class="flex flex-col items-center">
           <h1 class="hide">
             <span class="text text-white uppercase md:text-5xl text-4xl md:text-left text-center">welcome to</span>
           </h1>
@@ -807,6 +827,23 @@
 
   const _cursor = new Cursor();
   gsap.registerPlugin(ScrollTrigger);
+  const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+    tl.to(".slider", {
+      y: "-100%",
+      duration: 1.5,
+      delay: 4,
+      ease: "power1.out",
+    });
+    tl.to(
+      ".intro",
+      {
+        y: "-100%",
+        duration: 1.5,
+        stagger: 0.3,
+        ease: "power1.out",
+      },
+      "-=1"
+    );
   gsap.to('.rshape', {
     scrollTrigger: {
       trigger: "#event",
@@ -823,7 +860,7 @@
     duration: 1,
     ease: "power1.out",
   });
-  gsap.to(".text", { duration: 1, stagger: 0, y: "0", ease: "power1.out" });
+  gsap.to(".text", { duration: 1, stagger: 0, delay: 5 ,y: "0", ease: "power1.out" });
   // gsap.to('.hide-button', { scrollTrigger: {
   //     trigger: ".marker1",
   //     toggleActions: "play none none none",
