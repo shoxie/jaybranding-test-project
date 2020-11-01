@@ -67,6 +67,7 @@
   left: 0;
   top: 0;
   pointer-events: none;
+  z-index: 50;
 }
 
 #cursor-shape {
@@ -75,8 +76,9 @@
   margin-top: -50%;
   margin-left: -50%;
   border-radius: 50%;
-  background-color: #8d2639;
+  background-color: #a72424;
   opacity: 50%;
+  z-index: 999;
 }
 .stroke-white {
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
